@@ -1,0 +1,13 @@
+{
+    "itens": [{
+        "id": 1,
+        "nome": "MacBook PRO",
+        "quantidade": 2,
+        "valor": 5300.00
+    }, {
+        "id": 2,
+        "nome": "Geladeira",
+        "quantidade": 1,
+        "valor": 2999.99
+    }]
+}
