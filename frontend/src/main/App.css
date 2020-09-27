@@ -1,0 +1,51 @@
+:root {
+    --bg-dark: #1A2F3A;
+
+    --logo-height: 100px;
+    --header-height: 100px;
+    --aside-width: 225px;
+    --footer-height: 40px;
+
+    --shadow:
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Layout em Grid */
+
+.app { /* div que envolve toda a aplicação em App.jsx */
+    margin: 0px;
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr; /* Grid com duas colunas, uma ocuda a larguda da variável, e a outra 1 frame. */
+    grid-template-rows: /* Grid com 3 linhas, a primeira tem a altura da var do header, a segunda com 1 frame, e a terceira a altura da var footer. */
+        var(--header-height)
+        1fr
+        var(--footer-height);
+    grid-template-areas: /* A área do grid tem 6 partes (3 linhas em 2 colunas) */ 
+        "header header"
+        "menu content"
+        "menu footer";
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+
+header.header {
+    grid-area: header; /* Aloca o header para a área definida em grid-template-areas na div app */
+}
+
+aside.menu-area {
+    grid-area: menu; /* Aloca o menu para a área definida em grid-template-areas na div app */
+}
+
+main.content {
+    grid-area: content; /* Aloca o content para a área definida em grid-template-areas na div app */
+}
+
+footer.footer {
+    grid-area: footer; /* Aloca o footer para a área definida em grid-template-areas na div app */
+}
