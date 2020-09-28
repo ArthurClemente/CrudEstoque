@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Main from '../template/Main'
 
 const headerProps = {
@@ -7,7 +7,7 @@ const headerProps = {
     subtitle: 'Cadastro de itens: Incluir, Listar, Alterar e Excluir.'
 }
 
-export default class UserCrud extends Component {
+export default class ItensCrud extends Component {
     render() {
         return (
             <Main {...headerProps}>
